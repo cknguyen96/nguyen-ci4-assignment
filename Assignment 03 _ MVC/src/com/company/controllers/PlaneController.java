@@ -80,7 +80,9 @@ public class PlaneController extends SingleController {
         }
         return planeController1;
     }
-
+    public Vector<BulletController> getBulletControllerVector(){
+        return this.bulletControllerVector;
+    }
     @Override
     public void run() {
         //cho gameObject (plane) run theo dx, dy cua gameVecto
@@ -93,7 +95,9 @@ public class PlaneController extends SingleController {
         }
 
         //Duyet het Vecto =>> bullet run
-        for(BulletController bulletController : this.bulletControllerVector) bulletController.run();
+        for(BulletController bulletController : this.bulletControllerVector){
+            bulletController.run();
+        }
     }
 
     @Override

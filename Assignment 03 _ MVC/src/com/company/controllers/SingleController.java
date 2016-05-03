@@ -19,6 +19,9 @@ public class SingleController implements Controller {
         this.gameDrawer = gameDrawer;
         this.gameVecto = new GameVecto();
     }
+    public GameObject getGameObject(){
+        return this.gameObject;
+    }
     @Override
     public void run() {
         this.gameObject.move(gameVecto);

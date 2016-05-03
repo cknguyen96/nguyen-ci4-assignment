@@ -10,6 +10,7 @@ import java.io.IOException;
 /**
  * Created by Admin on 5/3/2016.
  */
+//Controller cua EnemyBullet
 public class EnemyBulletController extends SingleController {
     private final int SPEED = 3;
 

@@ -11,12 +11,14 @@ import java.util.Vector;
 /**
  * Created by Admin on 5/3/2016.
  */
+//Controller cua plan2 extends tu Plane1
 public class Plane2Controller extends PlaneController {
-
+    //Constructor
     public Plane2Controller(GameObject gameObject, GameDrawer gameDrawer) {
         super(gameObject, gameDrawer);
         bulletControllerVector = new Vector<BulletController>();
     }
+    //Single
     private static Plane2Controller plane2Controller;
     public static Plane2Controller getPlane2Controller(){
         if(plane2Controller == null){

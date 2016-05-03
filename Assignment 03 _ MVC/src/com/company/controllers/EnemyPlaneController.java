@@ -14,15 +14,19 @@ import java.util.Vector;
 /**
  * Created by Admin on 5/3/2016.
  */
+//Controller cua EP
 public class EnemyPlaneController extends SingleController {
     private final int SPEED = 1;
     public static final int DEFAULT_WIDTH = 50;
     public static final int DAFAULT_HEIGHT = 40;
+    public boolean isAlive = true;
     private Vector<EnemyBulletController> enemyBulletControllerVector;
+    //COnstuctor
     public EnemyPlaneController(GameObject gameObject, ImageDrawer gameDrawer) {
         super(gameObject, gameDrawer);
         enemyBulletControllerVector = new Vector<EnemyBulletController>();
     }
+    //EnemyPlane shot
     public void shot(){
         EnemyBullet enemyBullet = new EnemyBullet(
                 this.gameObject.getX() + this.gameObject.getWidth()/2 - EnemyBullet.width/2,
@@ -40,6 +44,7 @@ public class EnemyPlaneController extends SingleController {
     }
 
     @Override
+    //EmemyPlane run
     public void run() {
         this.gameVecto.dy = SPEED;
         super.run();
@@ -47,6 +52,7 @@ public class EnemyPlaneController extends SingleController {
     }
 
     @Override
+    //EnemyPlane paint
     public void paint(Graphics g) {
         super.paint(g);
         for(EnemyBulletController enemyBulletController : this.enemyBulletControllerVector) enemyBulletController.paint(g);
